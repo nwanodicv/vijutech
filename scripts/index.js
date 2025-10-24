@@ -102,20 +102,76 @@ innerHTML = `
 
 
     //................Our Blog page............
+    const posts =  [
+      {
+        title: "How We Built Our First VTU Web App in ASP.NET Core",
+        author: "Victor J.",
+        date: "October 22, 2025",
+        image: "images/ASP.NET-IMG.jfif",
+        excerpt: "Learn how ViJuTech built its first VTU web app using ASP.NET Core and C#...",
+        content: "Full blog content goes here..."
+      },
+      {
+        title: "Top 7 Tools Every Nigerian Developer Should Know in 2025",
+        author: "Victor J.",
+        date: "October 18, 2025",
+        image: "images/top-7-tools-for-developers.png",
+        excerpt: "Explore powerful tools that help you code, deploy, and grow as a developer...",
+        content: "Full article here..."
+      }];
 
-    const ourBlogSection = document.querySelector(".blog-page");
-    ourBlogSection.addEventListener("click", () => {
-        event.preventDefault(); // Prevent default link behavior
-        let blogHTML = `
-        <div>Hello World
-        </div>
-        `;
-    document.querySelector(".main-grid").innerHTML = blogHTML;
+    const blogSection = document.querySelector(".blog-page");
+    blogSection.addEventListener("click", () => {
+      event.preventDefault(); // Prevent default link behavior
+      document.createElement("div").className = "blog-div";
+      let blogHTML = `<h1 class="blog-heading">Our Latest Blog Posts</h1>`;
+      posts.forEach(post => {
+        blogHTML += `
+        <div class="blog-post">
+          <img src="${post.image}" alt="${post.title}" class="blog-thumbnail">
+          <h2 class="blog-title">${post.title}</h2>
+          <p class="blog-meta"><strong>By:</strong> ${post.author} | ${post.date}</p>
+          <p class="blog-excerpt">${post.excerpt}</p>
+          <p class="blog-content" style="display:none;">${post.content}</p>
+          <button class="read-more-btn">Read More</button>
+        </div>`;
+      });
+      document.querySelector(".main-grid").innerHTML = blogHTML;
     });
+// ..............End of Blog page............
 
-    // .............
-    
-    
+//...................Career Page.............
 
+const careerSection = document.querySelector('.career-page');
+careerSection.addEventListener("click", () => {
+  event.preventDefault();
+  let careerHTML = `
+  <p class="career-paragraph">Sorry! This Page is not yet available.</p>
+  `;
+document.querySelector(".main-grid").innerHTML = careerHTML;
+});
+//................End of Career Page.........
 
- 
+//...................Clients Page.............
+
+const clientsSection = document.querySelector('.clients-page');
+clientsSection.addEventListener("click", () => {
+  event.preventDefault();
+  let clientsHTML = `
+  <p class="clients-paragraph">Sorry! This Page is not yet available.</p>
+  `;
+document.querySelector(".main-grid").innerHTML = clientsHTML;
+});
+//................End of Clients Page.........
+
+//...................Service Page.............
+
+const serviceSection = document.querySelector('.service-page');
+serviceSection.addEventListener("click", () => {
+  event.preventDefault();
+  let serviceHTML = `
+  <p class="service-paragraph">Sorry! This Page is not yet available.</p>
+  `;
+document.querySelector(".main-grid").innerHTML = serviceHTML;
+});
+//................End of Service Page.........

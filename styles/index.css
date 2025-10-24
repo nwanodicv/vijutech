@@ -161,6 +161,336 @@ h4 {
 }
 /*.....................................*/
 
+/*...............Our Blog Page.............*/
+.blog-div {
+  margin: 3rem 7rem;
+}
+
+.blog-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.blog-post {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.blog-post:hover {
+  transform: scale(1.01);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.blog-post-content {
+  padding: 1rem;
+}
+
+.blog-post-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.blog-post-content p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+/*.....................................*/
+
+/*..............Footer Section............*/
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+/*.....................................*/
+
+/*................Career page section.........*/
+.career-paragraph {
+  text-align: center;
+  margin: 13rem;
+}
+/*..........................................*/
+
+/*................Clients page section.........*/
+.clients-paragraph {
+  text-align: center;
+  margin: 13rem;
+}
+/*..........................................*/
+
+/*................Service page section.........*/
+.service-paragraph {
+  text-align: center;
+  margin: 13rem;
+}
+/*..........................................*/
 
 
+/*........Responsive Design for Mobile Devices........*/
+@media screen and (max-width: 390px) {
+  * {
+  margin: 0;
+  z-index: 1;
+}
+
+header, main, footer {
+  width: 25rem;
+}
+/*........Header Section..........*/
+header {
+  background-color: #000000;
+  height: 4rem;
+}
+
+.logo {
+  width: 65px;
+  margin-right: 5rem;
+  cursor: pointer;
+}
+
+/*.............Navigation Section..........*/
+
+nav a{
+  text-decoration: none;
+  color: #ffffff;
+  justify-content: space-between;
+}
+
+a {
+  margin-right: 5rem;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+ /*..........Main Section............*/
+
+.main-grid{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.main-div {
+  background-color: red;
+  margin: 0.5rem;
+}
+
+.hero-image {
+  display: grid;
+  justify-content: space-between;
+}
+/*......First Sreen Section........*/
+.first-screen {
+  background-color: #000000;
+  color: #ffffff;
+  width: 19.3rem;
+  height: 50rem;
+  text-align: center;
+}
+
+.textme {
+  margin-top: 2rem;
+  color: rgb(146, 246, 146);
+}
+
+.textme1 {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-bottom-right-radius: 0.6rem;
+  border-top-left-radius: 0.7rem;
+}
+
+.company {
+  margin-top: 10rem;
+  font-size: 45px;
+}
+
+/*..........Second Screen Section............*/
+
+.second-screen {
+  width: 19.3rem;
+  background-color:#000000;
+}
+
+.second-screen-img {
+  width: 19.3rem;
+  height: 20rem;
+  cursor: pointer;
+}
+
+
+/*...............Product Section...........*/
+
+.product-div {
+  margin: 3rem 0.1rem;
+}
+
+.ourservice {
+  margin-top: 0.5rem;
+  margin-right: 7rem;
+  text-align: center;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+.product-container {
+  display: grid;
+  width: 19.3rem;
+  row-gap: 1rem;
+}
+
+.product {
+  border-style: ridge;
+  border-color:#ffffff;
+  background-color: #ffffff;
+  width: 17.3rem;
+  height: 15rem;
+  border-radius: 0.5rem;
+}
+
+h4 {
+  color: rgb(62, 62, 62);
+  margin-top: 1rem;
+}
+
+.app {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.mobile-app, .web-app, .AI-app, 
+.app-modernizing, .E-commerce-app,
+.interprise-app, .on-demand-app, 
+.app-testing, .app-integration{
+  width: 50px;
+
+}
+
+/*..............AboutUs Page............*/
+
+.aboutus-div {
+  max-width: 50rem;
+  margin-left: 15rem;
+}
+
+.aboutus-heading {
+  text-align: center;
+}
+
+.aboutus-paragraph {
+  text-align: center;
+}
+/*.....................................*/
+
+/*...............Our Blog Page.............*/
+.blog-div {
+  margin: 3rem 7rem;
+}
+
+.blog-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.blog-post {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.blog-post:hover {
+  transform: scale(1.01);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.blog-post-content {
+  padding: 1rem;
+}
+
+.blog-post-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.blog-post-content p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+/*.....................................*/
+
+/*..............Footer Section............*/
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 2rem;
+}
+/*.....................................*/
+
+/*................Career page section.........*/
+.career-paragraph {
+  text-align: center;
+  margin: 13rem;
+}
+/*..........................................*/
+
+/*................Clients page section.........*/
+.clients-paragraph {
+  text-align: center;
+  margin: 13rem;
+}
+/*..........................................*/
+
+/*................Service page section.........*/
+.service-paragraph {
+  text-align: center;
+  margin: 13rem;
+}
+/*..........................................*/
+}
 
