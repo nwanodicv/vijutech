@@ -175,3 +175,12 @@ serviceSection.addEventListener("click", () => {
 document.querySelector(".main-grid").innerHTML = serviceHTML;
 });
 //................End of Service Page.........
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('#menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  menuToggle.classList.toggle('active');
+});

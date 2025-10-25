@@ -9,7 +9,7 @@ header, main, footer {
 /*........Header Section..........*/
 header {
   background-color: #000000;
-  height: 4rem;
+  height: 5rem;
 }
 
 .logo {
@@ -23,11 +23,10 @@ header {
 nav a{
   text-decoration: none;
   color: #ffffff;
-  justify-content: space-between;
+  margin-left: 5.5rem;
 }
 
 a {
-  margin-right: 5rem;
   font-size: 1.1rem;
 }
 
@@ -35,7 +34,8 @@ a:hover {
   text-decoration: underline;
   font-size: 1.2rem;
 }
- /*..........Main Section............*/
+ 
+/*..................End of Hamburger icon..............*/
 
 .main-grid{
   display: grid;
@@ -115,6 +115,7 @@ button {
   justify-content: space-around;
   margin-bottom: 1rem;
   width: 70rem;
+
 }
 
 .product {
@@ -247,19 +248,23 @@ footer {
 
 
 /*........Responsive Design for Mobile Devices........*/
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
   * {
   margin: 0;
   z-index: 1;
 }
+
 
 header, main, footer {
   width: 25rem;
 }
 /*........Header Section..........*/
 header {
+  display: flex;
   background-color: #000000;
   height: 4rem;
+  position: relative;
+  z-index: 100;
 }
 
 .logo {
@@ -273,17 +278,77 @@ header {
 nav a{
   text-decoration: none;
   color: #ffffff;
-  justify-content: space-between;
+  height: 0.3rem;
 }
 
 a {
-  margin-right: 5rem;
   font-size: 1.1rem;
 }
 
 a:hover {
   text-decoration: underline;
   font-size: 1.2rem;
+}
+
+
+
+/*...........Hamburger icon............*/
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 8rem;
+  z-index: 999;
+}
+.menu-toggle span {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 10px;
+  padding: 8px;
+  width: 9.3rem;
+  position: absolute;
+  margin-bottom: 30rem;
+}
+
+.nav-links a {
+  display: block;
+  color: white;
+  padding-top: 2rem;
+  padding-left: 0.1rem;
+  text-decoration: none;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.menu-toggle .bar {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: 0.4s ease;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
  /*..........Main Section............*/
 
@@ -293,7 +358,6 @@ a:hover {
 }
 
 .main-div {
-  background-color: red;
   margin: 0.5rem;
 }
 
@@ -372,7 +436,7 @@ button {
   border-color:#ffffff;
   background-color: #ffffff;
   width: 17.3rem;
-  height: 15rem;
+  height: 18rem;
   border-radius: 0.5rem;
 }
 
@@ -426,7 +490,7 @@ h4 {
 }
 .blog-post {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 2rem;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -443,7 +507,7 @@ h4 {
 
 .blog-post img {
   width: 100%;
-  height: 250px;
+  height: 290px;
   object-fit: cover;
 }
 
